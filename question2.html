@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 3 - 38 Studios JavaScript Test</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	
+	<div class="header">
+		<h1>Question 2</h1>
+	</div>
+	
+	<div>
+		<h2>Issue 1</h2><br />
+		<p>Before uncommenting the code in sendMessage you have a guaranteed pass. The error can never be triggered.</p>
+	</div>
+	
+	<div>
+		<h2>Issue 2</h2><br />
+		<p>The function sendMessage calls onMessage immediately, this may cause for insertions of failed messages. Also with sendAllClients uncommented it's likely to be injected twice since onMessage gets called once in sendMessage and once resulting from sendAllClients.</p>
+	</div>
+	
+	<div>
+		<h2>Issue 3</h2><br />
+		<p>Checking for a pass on sendMessage cannot work based on the success of sending messages to all clients. Since it would be dependent on network code then the return result will be pre-emptive. You would need to pass in a callback and have it execute after the successful network call of sending the message to all the clients.</p>
+	</div>
+	
+	<div>
+		<h2>Issue 4</h2><br />
+		<p>While minor and likely not to cause issues due to hoisting. It may be better to set the onkeypress event to the keyPress function AFTER declaring the function. It can cause confusion specially if more than one person is working on the code base.</p>
+	</div>
+	
+	<div>
+		<h2>Issue 5</h2><br />
+		<p>Although they are not errors/bugs it would be better to write this setup within a closure to avoid pollution of the global scope. It would also be better not to use element event attributes to bind events with. Using modern methods such as addEventListener or even as far as using event delegation on a shared parent element would likely be a better solution.</p>
+	</div>
+	
+</body>
+</html>

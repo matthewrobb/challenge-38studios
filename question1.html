@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 3 - 38 Studios JavaScript Test</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	
+	<div class="header">
+		<h1>Question 1</h1>
+		<h2>Comments -</h2>
+		<p>This question has a couple of parts to it and so I will break them down and answer each individually.</p>
+	</div>
+	
+	<div>
+		<h2>Question 1-a: Create an anchor using HTML and then in JavaScript.</h2><br />
+		<h3>HTML:</h3>
+		<pre><code>
+&lt;a&gt;&lt;/a&gt;
+		</code></pre>
+		<h3>JavaScript:</h3>
+		<pre><code>
+var anchor = document.createElement("A");
+		</code></pre>
+	</div>
+	
+	<div>
+		<h2>Question 1-b: Have this anchor reference www.38studios.com.</h2><br />
+		<h3>HTML:</h3>
+		<pre><code>
+&lt;a href="http://www.38studios.com"&gt;38 Studios&lt;/a&gt;
+		</code></pre>
+		<h3>JavaScript:</h3>
+		<pre><code>
+var anchor = document.createElement("A");
+
+anchor.setAttribute("href", "http://www.38studios.com");
+anchor.innerHTML = "38 Studios";
+		</code></pre>
+	</div>
+	
+	<div>
+		<h2>Question 1-c: What would happen if the anchor reference was "#38studios" and then clicked on?</h2><br />
+		<p>The browser would look for an element in the page that has an ID attribute equal to everything to the right of the hash symbol. If it finds one it will scroll the page to that element as well as appending "#38studios" to the end of the url.</p>
+	</div>
+	
+</body>
+</html>

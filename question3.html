@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 3 - 38 Studios JavaScript Test</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	
+	<div class="header">
+		<h1>Question 3</h1>
+		<h2>Comments -</h2>
+		<p>Since the questions do not mention being able to use a framework I will be writing this in the style of modern browsers as far as Standards go. I will support modern webkit and gecko based browsers.<br /><br /></p>
+		<p>Clicking on shape will cause all shapes that do no collide with that shape to disappear. Clicking on white space in each box will reset the shapes.<br /><br /></p>
+		<p>Due to the time restraints TRUE collisions for circles is not implemented. It should NOT cause false positives based on the provided sample data.</p>
+	</div>
+	
+	<div>
+		<h2>List 1</h2>
+		<div id="twoD" class="context"></div>
+	</div>
+	<div>
+		<h2>List 2</h2>
+		<div id="threeD" class="context"></div>
+	</div>
+	<div>
+		<h2>List 3</h2>
+		<div id="fourD" class="context"></div>
+	</div>
+	
+	<script type="text/javascript" src="2dcontext.js"></script>
+	<script type="text/javascript">
+		
+		// List 1 population
+		Shape.populate(document.getElementById("twoD"),"square,50,50,50;square,156,120,200;square,190,300,190;square,300,300,100;square,160,40,60;");
+		
+		// List 2 population
+		Shape.populate(document.getElementById("threeD"),"square,50,50,50;square,156,120,200;square,190,300,190;square,300,300,100;square,160,40,60;rectangle,150,50,150,20;rectangle,250,180,20,150;rectangle,123,321,123,321;");
+		
+		// List 3 population
+		Shape.populate(document.getElementById("fourD"),"square,50,50,50;square,156,120,200;square,190,300,190;square,300,300,100;square,160,40,60;rectangle,150,50,150,20;rectangle,250,180,20,150;rectangle,123,321,123,321;circle, 130,50,50;circle,260,250,15;circle,100,350,30;");
+		
+	</script>
+	
+</body>
+</html>
